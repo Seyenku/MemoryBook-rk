@@ -138,6 +138,6 @@ namespace MemoryBook_rk.Models
         public bool VictoryParadeParticipants { get; set; }
 
         // Свойство для связи с героями, если требуется установить отношение «один ко многим»
-        public ICollection<Hero> Heroes { get; set; }
+        public ICollection<Heroes> Heroes { get; set; }
     }
 }

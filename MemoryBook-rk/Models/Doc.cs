@@ -7,16 +7,16 @@ namespace MemoryBook_rk.Models
     /// Модель для таблицы docs.
     /// </summary>
     [Table("docs")]
-    public class Doc
+    public class Docs
     {
         // Первичный ключ
         [Key]
         [Column("dbid")]
-        public int DbId { get; set; }
+        public int? DbId { get; set; }
 
         // Путь к документу
         [Column("path")]
-        public string Path { get; set; }
+        public string? Path { get; set; }
 
         // Дополнительное числовое поле
         [Column("id")]
@@ -25,14 +25,16 @@ namespace MemoryBook_rk.Models
         // ETS – строковое поле длиной до 50 символов
         [Column("ets")]
         [StringLength(50)]
-        public string Ets { get; set; }
+        public string? Ets { get; set; }
 
         // Флаг наличия фото
         [Column("photo")]
-        public bool Photo { get; set; }
+        public bool? Photo { get; set; }
 
         // Флаг наличия скана документа
         [Column("scan_do")]
-        public bool ScanDo { get; set; }
+        public bool? ScanDo { get; set; }
+
+        public virtual MBook? MBook { get; set; }
     }
 }

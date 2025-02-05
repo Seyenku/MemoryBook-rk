@@ -7,7 +7,7 @@ namespace MemoryBook_rk.Models
     /// Модель для таблицы logs.
     /// </summary>
     [Table("logs")]
-    public class Log
+    public class Logs
     {
         // Первичный ключ
         [Key]
@@ -29,5 +29,7 @@ namespace MemoryBook_rk.Models
         // Дата и время действия
         [Column("ddate")]
         public DateTime Date { get; set; }
+
+        public virtual Users? Users { get; set; }
     }
 }

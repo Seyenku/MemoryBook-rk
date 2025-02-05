@@ -17,6 +17,6 @@ namespace MemoryBook_rk.Models
 
         // Значение статистики
         [Column("value")]
-        public int Value { get; set; }
+        public int? Value { get; set; }
     }
 }

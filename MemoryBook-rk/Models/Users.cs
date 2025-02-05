@@ -7,7 +7,7 @@ namespace MemoryBook_rk.Models
     /// Модель для таблицы users.
     /// </summary>
     [Table("users")]
-    public class User
+    public class Users
     {
         // Первичный ключ
         [Key]
@@ -17,15 +17,17 @@ namespace MemoryBook_rk.Models
         // Логин пользователя (до 50 символов)
         [Column("login")]
         [StringLength(50)]
-        public string Login { get; set; }
+        public string? Login { get; set; }
 
         // Пароль пользователя (до 50 символов)
         [Column("pass")]
         [StringLength(50)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         // Роль пользователя
         [Column("role")]
-        public int Role { get; set; }
+        public int? Role { get; set; }
+
+        public virtual ICollection<Logs>? Logs { get; set; }
     }
 }

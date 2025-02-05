@@ -16,19 +16,22 @@ namespace MemoryBook_rk.Models
 
         // Идентификатор родительского элемента
         [Column("parentID")]
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
 
         // Подпись или описание
         [Column("caption")]
-        public string Caption { get; set; }
+        public string? Caption { get; set; }
 
         // Имя файла (до 255 символов)
         [Column("fname")]
         [StringLength(255)]
-        public string FileName { get; set; }
+        public string? FileName { get; set; }
 
         // Тип файла
         [Column("ftype")]
-        public int FileType { get; set; }
+        public int? FileType { get; set; }
+
+        public virtual ICollection<Gallery>? Children { get; set; }
+        public virtual Gallery? Parent { get; set; }
     }
 }

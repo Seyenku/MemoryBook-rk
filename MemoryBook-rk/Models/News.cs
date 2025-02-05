@@ -16,26 +16,26 @@ namespace MemoryBook_rk.Models
 
         // Заголовок новости
         [Column("title")]
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         // Дата новости (хранится как строка)
         [Column("datee")]
-        public string Date { get; set; }
+        public string? Date { get; set; }
 
         // Краткий текст новости
         [Column("text_short")]
-        public string TextShort { get; set; }
+        public string? TextShort { get; set; }
 
         // Полный текст новости (тип text)
         [Column("text_new", TypeName = "text")]
-        public string TextNew { get; set; }
+        public string? TextNew { get; set; }
 
         // Источник новости
         [Column("source")]
-        public string Source { get; set; }
+        public string? Source { get; set; }
 
         // Изображение в виде бинарных данных
         [Column("image")]
-        public byte[] Image { get; set; }
+        public byte[]? Image { get; set; }
     }
 }
