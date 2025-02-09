@@ -7,7 +7,7 @@ namespace MemoryBook_rk.Models
     /// Модель для таблицы pages.
     /// </summary>
     [Table("pages")]
-    public class Pages
+    public class Page
     {
         // Первичный ключ
         [Key]

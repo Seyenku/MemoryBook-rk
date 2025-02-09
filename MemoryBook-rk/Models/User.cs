@@ -7,7 +7,7 @@ namespace MemoryBook_rk.Models
     /// Модель для таблицы users.
     /// </summary>
     [Table("users")]
-    public class Users
+    public class User
     {
         // Первичный ключ
         [Key]

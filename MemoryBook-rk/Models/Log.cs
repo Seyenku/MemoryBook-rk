@@ -30,6 +30,6 @@ namespace MemoryBook_rk.Models
         [Column("ddate")]
         public DateTime Date { get; set; }
 
-        public virtual Users? Users { get; set; }
+        public virtual User? Users { get; set; }
     }
 }

@@ -9,135 +9,135 @@ namespace MemoryBook_rk.Models
     [Table("mbook")]
     public class MBook
     {
-        // Первичный ключ
+        // Первичный ключ С возможным значением NULL
         [Key]
         [Column("dbid")]
-        public int DbId { get; set; }
+        public int? DbId { get; set; }
 
         [Column("mid")]
-        public string Mid { get; set; }
+        public string? Mid { get; set; }
 
         [Column("mentity")]
-        public string MEntity { get; set; }
+        public string? MEntity { get; set; }
 
         [Column("mheader")]
-        public string MHeader { get; set; }
+        public string? MHeader { get; set; }
 
         [Column("mfamily")]
-        public string MFamily { get; set; }
+        public string? MFamily { get; set; }
 
         [Column("mname")]
-        public string MName { get; set; }
+        public string? MName { get; set; }
 
         [Column("mmiddlename")]
-        public string MMiddlename { get; set; }
+        public string? MMiddlename { get; set; }
 
         [Column("mbirthday")]
-        public string MBirthday { get; set; }
+        public string? MBirthday { get; set; }
 
         [Column("mbirthplace")]
-        public string MBirthplace { get; set; }
+        public string? MBirthplace { get; set; }
 
         [Column("mdraftplace")]
-        public string MDraftPlace { get; set; }
+        public string? MDraftPlace { get; set; }
 
         [Column("mlastplace")]
-        public string MLastPlace { get; set; }
+        public string? MLastPlace { get; set; }
 
         [Column("mrank")]
-        public string MRank { get; set; }
+        public string? MRank { get; set; }
 
         [Column("mpost")]
-        public string MPost { get; set; }
+        public string? MPost { get; set; }
 
         [Column("mreasonout")]
-        public string MReasonOut { get; set; }
+        public string? MReasonOut { get; set; }
 
         [Column("mdatedeath")]
-        public string MDateDeath { get; set; }
+        public string? MDateDeath { get; set; }
 
         [Column("mdateout")]
-        public string MDateOut { get; set; }
+        public string? MDateOut { get; set; }
 
         [Column("mplaceout")]
-        public string MPlaceOut { get; set; }
+        public string? MPlaceOut { get; set; }
 
         [Column("mgraveplace")]
-        public string MGravePlace { get; set; }
+        public string? MGravePlace { get; set; }
 
         [Column("mfromgrave")]
-        public string MFromGrave { get; set; }
+        public string? MFromGrave { get; set; }
 
         [Column("mhospital")]
-        public string MHospital { get; set; }
+        public string? MHospital { get; set; }
 
         [Column("mcamp")]
-        public string MCamp { get; set; }
+        public string? MCamp { get; set; }
 
         [Column("mdatecamp")]
-        public string MDateCamp { get; set; }
+        public string? MDateCamp { get; set; }
 
         [Column("mplacecamp")]
-        public string MPlaceCamp { get; set; }
+        public string? MPlaceCamp { get; set; }
 
         [Column("mdestiny")]
-        public string MDestiny { get; set; }
+        public string? MDestiny { get; set; }
 
         [Column("mrelative")]
-        public string MRelative { get; set; }
+        public string? MRelative { get; set; }
 
         [Column("maddinfo")]
-        public string MAddInfo { get; set; }
+        public string? MAddInfo { get; set; }
 
         [Column("msource")]
-        public string MSource { get; set; }
+        public string? MSource { get; set; }
 
         // Флаг верификации
         [Column("verify")]
-        public bool Verify { get; set; }
+        public bool? Verify { get; set; }
 
         // Изображение в виде байтов
         [Column("img")]
-        public byte[] Img { get; set; }
+        public byte[]? Img { get; set; }
 
         // Флаг для упорядочивания героев
         [Column("heroes_order")]
-        public bool HeroesOrder { get; set; }
+        public bool? HeroesOrder { get; set; }
 
         // Флаг социальной принадлежности героев
         [Column("heroes_soc")]
-        public bool HeroesSoc { get; set; }
+        public bool? HeroesSoc { get; set; }
 
         // Изображение (хранится как строка, например, путь или URL)
         [Column("image")]
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
         // Флаги принадлежности к разным категориям
         [Column("pop_av")]
-        public bool PopAv { get; set; }
+        public bool? PopAv { get; set; }
 
         [Column("pop_ak")]
-        public bool PopAk { get; set; }
+        public bool? PopAk { get; set; }
 
         [Column("pop_zhp")]
-        public bool PopZhp { get; set; }
+        public bool? PopZhp { get; set; }
 
         [Column("pop_pr")]
-        public bool PopPr { get; set; }
+        public bool? PopPr { get; set; }
 
         [Column("pop_sc")]
-        public bool PopSc { get; set; }
+        public bool? PopSc { get; set; }
 
         [Column("pop_hs")]
-        public bool PopHs { get; set; }
+        public bool? PopHs { get; set; }
 
         [Column("peoples_choices")]
-        public bool PeoplesChoices { get; set; }
+        public bool? PeoplesChoices { get; set; }
 
         [Column("victory_parade_participants")]
-        public bool VictoryParadeParticipants { get; set; }
+        public bool? VictoryParadeParticipants { get; set; }
 
         // Свойство для связи с героями, если требуется установить отношение «один ко многим»
-        public ICollection<Heroes> Heroes { get; set; }
+        public ICollection<Hero>? Heroes { get; set; }
     }
 }

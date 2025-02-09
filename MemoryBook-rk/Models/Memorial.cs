@@ -40,7 +40,7 @@ namespace MemoryBook_rk.Models
         public string? MBirthplace { get; set; }
 
         [Column("mdraftplace")]
-        public string MDraftPlace { get; set; }
+        public string? MDraftPlace { get; set; }
 
         [Column("mlastplace")]
         public string? MLastPlace { get; set; }
